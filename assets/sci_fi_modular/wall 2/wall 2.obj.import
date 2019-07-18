@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wall 2.obj-71351fa212aad728cc2a18b5c527570f.mesh"
+
+[deps]
+
+files=[ "res://.import/wall 2.obj-71351fa212aad728cc2a18b5c527570f.mesh" ]
+
+source_file="res://assets/sci_fi_modular/wall 2/wall 2.obj"
+dest_files=[ "res://.import/wall 2.obj-71351fa212aad728cc2a18b5c527570f.mesh", "res://.import/wall 2.obj-71351fa212aad728cc2a18b5c527570f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

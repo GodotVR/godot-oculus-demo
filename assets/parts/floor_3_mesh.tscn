@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/sci_fi_modular/floor 2/floor 2.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/parts/floor_3_material.tres" type="Material" id=2]
+
+[node name="MeshInstance" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )

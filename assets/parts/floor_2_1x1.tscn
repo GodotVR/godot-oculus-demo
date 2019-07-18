@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sci_fi_modular/floor 1/floor 1.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/parts/floor_1_material.tres" type="Material" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 0.001, 1 )
+
+[node name="floor" type="Spatial"]
+
+[node name="Floor_MeshInstance_01" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, -1, 0, 1 )
+layers = 524288
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="Floor_MeshInstance_02" type="MeshInstance" parent="."]
+transform = Transform( 1, -3.55271e-015, 0, 0, 0.866024, -0.5, -3.19744e-014, 0.5, 0.866024, -1, 0, 0.717394 )
+layers = 524288
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="Floor_StaticBody" type="StaticBody" parent="."]
+collision_layer = 524288
+collision_mask = 0
+
+[node name="CollisionShape_01" type="CollisionShape" parent="Floor_StaticBody"]
+transform = Transform( 1, 0, -7.10543e-015, 1.69407e-020, 1, 8.54118e-022, -3.55271e-015, 0, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape_02" type="CollisionShape" parent="Floor_StaticBody"]
+transform = Transform( 1, -1.77636e-015, -3.55271e-015, 0, 0.866025, -0.5, -2.84217e-014, 0.5, 0.866025, 0, 0.5, -0.131703 )
+shape = SubResource( 1 )

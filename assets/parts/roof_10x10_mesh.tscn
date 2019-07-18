@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/parts/roof_material_10x10.tres" type="Material" id=1]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 20, 20 )
+
+[node name="MeshInstance" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, -1, -8.74228e-008, 0, 8.74228e-008, -1, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 1 )

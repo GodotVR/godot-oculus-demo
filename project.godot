@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Godot Oculus VR Demo"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[gdnative]
+
+singletons=[ "res://addons/godot-oculus/godot_oculus.gdnlib" ]
+
+[layer_names]
+
+3d_render/layer_1="Player"
+3d_physics/layer_1="Player"
+3d_physics/layer_2="Objects"
+3d_render/layer_20="Environment"
+3d_physics/layer_20="Environment"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

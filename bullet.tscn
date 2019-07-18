@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+bounce = 0.3
+
+[sub_resource type="SphereShape" id=2]
+
+[sub_resource type="SphereMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+metallic = 1.0
+metallic_specular = 0.0
+roughness = 0.2
+
+[node name="Spatial" type="Spatial"]
+
+[node name="RigidBody" type="RigidBody" parent="."]
+mass = 0.204082
+physics_material_override = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody/CollisionShape"]
+layers = 524289
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )

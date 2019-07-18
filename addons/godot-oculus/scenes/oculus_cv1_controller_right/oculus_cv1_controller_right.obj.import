@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/oculus_cv1_controller_right.obj-c57a7127e692a05a0ad5f2d36c129fcc.mesh"
+
+[deps]
+
+files=[ "res://.import/oculus_cv1_controller_right.obj-c57a7127e692a05a0ad5f2d36c129fcc.mesh" ]
+
+source_file="res://addons/godot-oculus/scenes/oculus_cv1_controller_right/oculus_cv1_controller_right.obj"
+dest_files=[ "res://.import/oculus_cv1_controller_right.obj-c57a7127e692a05a0ad5f2d36c129fcc.mesh", "res://.import/oculus_cv1_controller_right.obj-c57a7127e692a05a0ad5f2d36c129fcc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
