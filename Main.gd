@@ -1,6 +1,10 @@
 extends Spatial
 
 func _ready():
+	# Hide rooms player is not in by default, we don't hide our doors or corridors
+	$Rooms/Room_02.visible = false
+	$Rooms/Room_03.visible = false
+	
 	# Find the interface and initialise
 	var arvr_interface = ARVRServer.find_interface("Oculus")
 	if arvr_interface and arvr_interface.initialize():

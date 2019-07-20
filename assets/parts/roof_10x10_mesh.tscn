@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/parts/roof_material_10x10.tres" type="Material" id=1]
+[ext_resource path="res://assets/parts/roof_material_world.tres" type="Material" id=1]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 20, 20 )

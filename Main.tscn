@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-oculus/scenes/oculus_first_person.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/rooms/Room_02.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/rooms/Sliding_door.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/rooms/Corridor_01.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/rooms/Room_03.tscn" type="PackedScene" id=11]
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 1 )
@@ -55,8 +56,7 @@ collision_mask = 524288
 [node name="Room_01" parent="Rooms" instance=ExtResource( 7 )]
 
 [node name="Room_02" parent="Rooms" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 15 )
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 15 )
 arvr_camera = NodePath("../../OculusFirstPerson/ARVRCamera")
 left_controller = NodePath("../../OculusFirstPerson/Left_Hand")
 right_controller = NodePath("../../OculusFirstPerson/Right_Hand")
@@ -72,6 +72,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 24 )
 
 [node name="Corridor_01" parent="Rooms" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 15 )
+
+[node name="Corridor_02" parent="Rooms" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -12, 0, 31 )
+
+[node name="Room_03" parent="Rooms" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 31 )
 [connection signal="slide_door" from="Rooms/Sliding_door_02" to="." method="_on_Sliding_door_02_slide_door"]
 
 [editable path="OculusFirstPerson"]

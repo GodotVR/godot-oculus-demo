@@ -27,8 +27,10 @@ func _on_body_entered(body):
 	# assume player, open doors
 	wanted_door_position = 2.9
 	set_process(true)
+	$Door_sound.playing = true
 
 func _on_body_exited(body):
 	# assume player, close doors
 	wanted_door_position = 1
 	set_process(true)
+	$Door_sound.playing = true

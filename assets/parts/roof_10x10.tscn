@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/parts/roof_10x10_mesh.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/parts/roof_material_world.tres" type="Material" id=2]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 10, 2, 10 )
@@ -8,6 +9,7 @@ extents = Vector3( 10, 2, 10 )
 [node name="Roof" type="Spatial"]
 
 [node name="MeshInstance" parent="." instance=ExtResource( 1 )]
+material/0 = ExtResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 

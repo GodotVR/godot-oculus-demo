@@ -4,12 +4,8 @@ This repository contains a demo showing off the Oculus Rift support for Godot.
 
 # License
 
-This repository is MIT licensed by Bastiaan Olij
-Note that the addons folder contains plugins with their own licenses
-
-The following 3rd party inclusions are also part of this repo:
-- Assets from https://github.com/wburton95/Godot-FPS-Demo which are MIT licensed.
-- Textures from cc0textures.com which are CC0 licensed
+This repository is MIT licensed by Bastiaan Olij unless otherwise specified.
+Note that various folders contains their own licenses applicable to the files contained within that folder.
 
 # A note about the physics layers
 

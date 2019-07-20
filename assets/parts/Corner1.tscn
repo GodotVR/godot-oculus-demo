@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/parts/floor_1_material_inv_uv.tres" type="Material" id=1]
+
+[node name="Corner" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+use_collision = true
+collision_layer = 524288
+collision_mask = 0
+
+[node name="CSGCombiner" type="CSGCombiner" parent="CSGCombiner"]
+
+[node name="Panel" type="CSGBox" parent="CSGCombiner/CSGCombiner"]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -0.705514, 0, 0.705514 )
+use_collision = true
+width = 2.85
+height = 0.01
+material = ExtResource( 1 )
+
+[node name="Panel2" type="CSGBox" parent="CSGCombiner/CSGCombiner"]
+transform = Transform( 0.707107, -0.707107, 3.09086e-008, 0, -4.37114e-008, -1, 0.707107, 0.707107, -3.09086e-008, 0.011, 1, -0.011 )
+use_collision = true
+width = 2.9
+height = 0.01
+material = ExtResource( 1 )
+
+[node name="Constraint" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+operation = 1
+width = 2.1
+height = 2.1
+depth = 2.1
