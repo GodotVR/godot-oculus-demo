@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/Boxes_metallicRoughness.png-5420a2c9ae6f62b105e1dab7006b8f93.s3tc.stex"
+path.etc2="res://.import/Boxes_metallicRoughness.png-5420a2c9ae6f62b105e1dab7006b8f93.etc2.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://assets/sketchfab.com/sci-fi-boxes/textures/Boxes_metallicRoughness.png"
+dest_files=[ "res://.import/Boxes_metallicRoughness.png-5420a2c9ae6f62b105e1dab7006b8f93.s3tc.stex", "res://.import/Boxes_metallicRoughness.png-5420a2c9ae6f62b105e1dab7006b8f93.etc2.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

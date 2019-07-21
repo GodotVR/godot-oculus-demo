@@ -1,16 +1,21 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-oculus/scenes/oculus_first_person.tscn" type="PackedScene" id=2]
 [ext_resource path="res://world_environment.tres" type="Environment" id=3]
 [ext_resource path="res://addons/vr-common/misc/VR_Common_Shader_Cache.tscn" type="PackedScene" id=4]
-[ext_resource path="res://addons/vr-common/functions/Function_Teleport.tscn" type="PackedScene" id=5]
-[ext_resource path="res://addons/vr-common/functions/Function_Direct_movement.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/rooms/Room_01.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/rooms/Room_02.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/rooms/Sliding_door.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/rooms/Corridor_01.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/rooms/Room_03.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/sketchfab.com/sci-fi-fighter/02___Default.material" type="Material" id=5]
+[ext_resource path="res://addons/vr-common/functions/Function_Teleport.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/vr-common/functions/Function_Pickup.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/vr-common/functions/Function_Direct_movement.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/rooms/room_01/Room_01.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/rooms/room_02/Room_02.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/rooms/Sliding_door.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/rooms/Corridor_01.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/rooms/room_03/Room_03.tscn" type="PackedScene" id=13]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 0.001, 0.001, 0.001 )
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 1 )
@@ -45,38 +50,51 @@ current = true
 
 [node name="vr_common_shader_cache" parent="OculusFirstPerson/ARVRCamera" index="1" instance=ExtResource( 4 )]
 
-[node name="Function_Teleport" parent="OculusFirstPerson/Left_Hand" index="1" instance=ExtResource( 5 )]
+[node name="fighter_material" type="MeshInstance" parent="OculusFirstPerson/ARVRCamera/vr_common_shader_cache"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 5 )
+
+[node name="Function_Teleport" parent="OculusFirstPerson/Left_Hand" index="1" instance=ExtResource( 6 )]
 collision_layer = 524288
 collision_mask = 524288
 
-[node name="Function_Direct_movement" parent="OculusFirstPerson/Right_Hand" index="1" instance=ExtResource( 6 )]
+[node name="Function_Pickup" parent="OculusFirstPerson/Left_Hand" index="2" instance=ExtResource( 7 )]
+collision_layer = 0
+impulse_factor = 2.0
+
+[node name="Function_Direct_movement" parent="OculusFirstPerson/Right_Hand" index="1" instance=ExtResource( 8 )]
+
+[node name="Function_Pickup" parent="OculusFirstPerson/Right_Hand" index="2" instance=ExtResource( 7 )]
+collision_layer = 0
+impulse_factor = 2.0
 
 [node name="Rooms" type="Spatial" parent="."]
 
-[node name="Room_01" parent="Rooms" instance=ExtResource( 7 )]
+[node name="Room_01" parent="Rooms" instance=ExtResource( 9 )]
 
-[node name="Room_02" parent="Rooms" instance=ExtResource( 8 )]
+[node name="Room_02" parent="Rooms" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 15 )
 arvr_camera = NodePath("../../OculusFirstPerson/ARVRCamera")
 left_controller = NodePath("../../OculusFirstPerson/Left_Hand")
 right_controller = NodePath("../../OculusFirstPerson/Right_Hand")
 
-[node name="Sliding_door_01" parent="Rooms" instance=ExtResource( 9 )]
+[node name="Sliding_door_01" parent="Rooms" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 8 )
 
-[node name="Sliding_door_02" parent="Rooms" instance=ExtResource( 9 )]
+[node name="Sliding_door_02" parent="Rooms" instance=ExtResource( 11 )]
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -5, 0, 15 )
 
-[node name="Sliding_door_03" parent="Rooms" instance=ExtResource( 9 )]
+[node name="Sliding_door_03" parent="Rooms" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 24 )
 
-[node name="Corridor_01" parent="Rooms" instance=ExtResource( 10 )]
+[node name="Corridor_01" parent="Rooms" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 15 )
 
-[node name="Corridor_02" parent="Rooms" instance=ExtResource( 10 )]
+[node name="Corridor_02" parent="Rooms" instance=ExtResource( 12 )]
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -12, 0, 31 )
 
-[node name="Room_03" parent="Rooms" instance=ExtResource( 11 )]
+[node name="Room_03" parent="Rooms" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 31 )
 [connection signal="slide_door" from="Rooms/Sliding_door_02" to="." method="_on_Sliding_door_02_slide_door"]
 

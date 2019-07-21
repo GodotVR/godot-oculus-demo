@@ -16,3 +16,8 @@ All objects we can interact with are in the objects layer.
 All the walls, floors, etc. are all part of the environment physics layer and restricts the movement of the player.
 
 By organising the physics layer in this way you make the physics engine work for you.
+
+# Todos
+- need to check with Nuno for license of godot arcade
+- add more stuff
+- make more rooms

@@ -31,6 +31,10 @@ singletons=[ "res://addons/godot-oculus/godot_oculus.gdnlib" ]
 3d_render/layer_20="Environment"
 3d_physics/layer_20="Environment"
 
+[memory]
+
+limits/message_queue/max_size_kb=4096
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
