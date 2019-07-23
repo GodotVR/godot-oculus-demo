@@ -17,7 +17,17 @@ All the walls, floors, etc. are all part of the environment physics layer and re
 
 By organising the physics layer in this way you make the physics engine work for you.
 
-# Todos
-- need to check with Nuno for license of godot arcade
-- add more stuff
-- make more rooms
+# Reporting issues
+
+If you have any problems running this demonstration please feel free to raise an issue on the github page. 
+If it is a problem specific to the Oculus driver however I recommend raising the issue at https://github.com/GodotVR/godot_oculus/issues
+
+About this repository
+---------------------
+This repository was created by and is maintained by Bastiaan Olij a.k.a. Mux213
+
+You can follow me on twitter for regular updates here:
+https://twitter.com/mux213
+
+Videos about my work with Godot including tutorials on working with VR in Godot can by found on my youtube page:
+https://www.youtube.com/BastiaanOlij

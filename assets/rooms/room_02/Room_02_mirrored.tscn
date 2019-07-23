@@ -35,18 +35,17 @@ extents = Vector3( 0.01, 1.5, 2 )
 [node name="Mirrored" type="Spatial"]
 
 [node name="Player" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Head" parent="Player" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 3 )
 
 [node name="Left_hand" type="MeshInstance" parent="Player"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 3 )
 mesh = ExtResource( 2 )
 material/0 = null
 
 [node name="Right_hand" type="MeshInstance" parent="Player"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 3 )
 mesh = ExtResource( 3 )
 material/0 = null
 
@@ -374,14 +373,14 @@ material/0 = null
 [node name="Lights" type="Spatial" parent="."]
 
 [node name="OmniLight_01" type="OmniLight" parent="Lights"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5, 4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, 4 )
 light_color = Color( 0.988235, 0.870588, 0.643137, 1 )
 light_energy = 5.0
 shadow_enabled = true
 omni_range = 6.0
 
 [node name="OmniLight_02" type="OmniLight" parent="Lights"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5, -3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 5, -3 )
 light_color = Color( 0.988235, 0.764706, 0.643137, 1 )
 light_energy = 5.0
 shadow_enabled = true
